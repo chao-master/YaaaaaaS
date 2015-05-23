@@ -18,7 +18,7 @@ colt: !if
             but then it broke whilst he was playing with it and he dosen't want to upset his brother.
             You figure you could try and help him.
         switch:
-            ~colt-quest:1
+            ~colt-quest: 1
     ~colt-quest=1: &colt-quest-1
         desc: >
             You reassure the colt you are working hard to help replace the flying disk and haven't forgotten
@@ -27,3 +27,8 @@ north:
     desc: North to the Town hall
     link: You head North to the town hall
     goto: town-hall-outside
+
+south:
+    desc: Off the green back to the town center
+    link: You leave the green and head back to the center
+    goto: town-center

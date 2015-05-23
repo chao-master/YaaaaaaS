@@ -48,7 +48,8 @@ class ifBlock(yaml.YAMLObject):
                 k,m = k.split("=",1)
             except ValueError:
                 m=True
-            if game.getVar(k,False) == m:
+            gt = game.getVar(k,False)
+            if gt == type(gt)(m):
                 return v
         return None
 
@@ -210,6 +211,11 @@ class Game():
 
                 if inpu[0] in self.getData().keys():
                     inpu = ["go",inpu[0]]
+
+                if inpu[0] == "DEBUG": #debug command
+                    pprint.pprint(game.variables)
+                    pprint.pprint(game.getData())
+                    continue
 
             if len(inpu) == 2:
 
