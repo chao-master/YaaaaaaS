@@ -1,0 +1,32 @@
+_:
+    name: Town Center
+    prompt: Town Center
+    desc: >
+        You find yourself in the busy town center.
+        The large water feature in the center catches your attention as does the foals happily playing around it.
+        To the north is green where you can hear more ponies enjoying themselves, proably with a picnic around this time.
+        Beyond the green you can make out the town hall.
+        To the east is the high street where most of the shops and stalls are to be found,
+        a delictible coctail of tastes and sounds drift down from there from the various stalls goods and customer bartering.
+        To the south is the quickest path out of the town, though it leads to the dark woods.
+        Finally to the west lays the bulk of the town's houses, the streets rather quiet at this time of day as ponies are out doing other things.
+
+north:
+    desc: North to the Green
+    link: You head North to the green
+    goto: town-green
+
+east:
+    desc: East to the High street
+    link: You head East, joining the crowd of ponies on the busy high street
+    goto: town-high-street
+
+south:
+    desc: South towards the edge of town and the woods.
+    link: You head South
+    goto: town-woods-street
+
+west:
+    desc: West towards the houses
+    link: You head west
+    goto: town-houses

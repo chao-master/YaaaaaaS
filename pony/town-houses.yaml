@@ -1,0 +1,44 @@
+_:
+    name: Houses
+    prompt: Houses
+    desc: >
+        You come to a small quiet cul-de-sac. There are 6 houses here numbered 3-8 and the route back east.
+
+house 3:
+    desc: Whilst it is the first house here it is numbered 3, how strange
+
+house 4:
+    desc: A small bunglow, looks like it has a reasonable sized garden out back
+
+house 5:
+    desc: A small family house with an extension
+
+house 6: !if
+    colt-quest=2:
+        desc: >
+            A reasonable sized house, but what grabs your attention is the large number boxes outside that look like
+            they contained sporting goods. This looks like it could be there the stall owner and his brother lives.
+            As you stand around wondering what to do you spot a rather unwell looking pony slowly grodge his way out towards the mail.
+            As he gets near you catch his attention and explain to him how his brother has sold out alread.
+            He isn't suprised at all but notes he really can't leave the house, for any extended period of time to resock the stall
+            You propose you could try but he shoots down that idea stating he would need some considerable collateral to make sure
+            you didn't run off with them. Though after he checks the mail he notes if you *do* find such collateral to come back.
+        switch:
+            colt-quest=3:
+    colt-quest:3:
+        desc: >
+            The sport stall's owner's and his brother house. The aforementioned brother is rather sick right now.
+            You decide it's best not to bother him unless you can find the collateral he wants to let you resock the stall.
+    '':
+        desc: A small house, the garden looks rather unkept and their is quite a bit of carboard that needs collecting.
+
+house 7:
+    desc: A rather tall house, it's strange how all the houses here are really diffrent.
+
+house 8:
+    desc: It's more of a small manor really...
+
+east:
+    desc: The Path back to the town center
+    link: You head back to the town center
+    goto: town-center

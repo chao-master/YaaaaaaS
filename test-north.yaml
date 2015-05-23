@@ -1,0 +1,22 @@
+_:
+    name: The Table Room Cupboard
+    desc: >
+        You find yourself in side a small broom cupboard.
+        They are many brooms here
+
+south:
+    desc: >
+        The exit, back to the room with the table
+    link: >
+        You head out the cupboard
+    goto: test-room
+
+brooms:
+    desc:
+        !if
+        '!test-room.south.locked': >
+            You search around the brooms and find one of them is actally a leaver, you pull it.
+        '': >
+            The thing here was the hidden leaver, and you already found that. Unless you want to be a janitor now...
+    switch:
+        '!test-room.south.locked': False

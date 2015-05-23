@@ -1,0 +1,47 @@
+_:
+    name: The Table Room
+    desc: >
+        You stand in the middle of a circular, mostly empty room. 
+        There are 4 exits around you and a table with a varity of items on it in the middle.
+    prompt: "Table Room"
+
+north:
+    desc: >
+        The northen exit, you can go through now because you have the key.
+    descLocked: >
+        The Northen exit. It is locked
+    link: >
+        You head north out the room, but it's not much help...
+    linkLocked: >
+        You try heading north but the exit is locked.
+    goto: test-north
+    locked: true
+
+south:
+    desc: >
+        The southern exit, unlocked by a broom hidden lever
+    descLocked: >
+        What a larged locked door
+    link: >
+        You head south...
+    linkLocked:
+        !if
+        'north.locked': >
+            This door leads south, it's rather large, imposing and locked.
+            
+        '': >
+            The key you have won't work on this door, try another
+    goto: test-room
+    locked: true
+
+table:
+    desc:
+        !if
+        'north.locked': >
+            A large table in the middle of the empty room.
+            There is a key on it, you take the key.
+        '': >
+            A large table in the middle of the empty room.
+            You have already taken the key
+    switch:
+        'north.locked': False

@@ -1,0 +1,26 @@
+_:
+    name: High Street
+    prompt: High Street
+    desc: >
+        The High street is very busy right now as numerous ponies try to get some lunch from the various stalls that line it.
+        After you manage to get into a free spot in the crowd you are able to spot several shops and stalls of potential intrest
+        There is a small food stall serving a varity of lovely smelling snacks and sandwhiches
+        A sporting stall which seems to be having issues staying well stocked in this weather
+        A clothing shop with a varity of dresses in the window display
+        And finally the local farmer's apple cart.
+        As the crowd moves around you you barely manage to keep track of which way out is.
+
+sports: !if
+    ~colt-quest=1: &coltQuest1
+        desc: >
+            The sporting stall seems like the perfect place to replace the young colt's broken flying disk,
+            and after much hussling through ponies you are able to talk to the owner.
+            Unforntally he informs you he is fresh out of flying disks, like most of his other stock.
+            And since his brother is under the weather today he can't leave the stall to restock from his house.
+        switch:
+            ~colt-quest:2
+    colt-quest=2: *coltQuest1
+    '':
+        desc: >
+            You fight your way through the crowd but are soon disapointed,
+            the sporting stall is pretty much completly out of stock.

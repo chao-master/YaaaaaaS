@@ -1,0 +1,26 @@
+_:
+    name: Town Green
+    prompt: Town Green
+    desc: >
+        You step onto the town green, and start walking around.
+        You skirt around foals playing varous games like football and catch and past a few ponies having picnics.
+        Further North is the town hall but at the edge of the green,
+        under some trees is a more intresting sight a young colt is crying.
+    init:
+        ~colt-quest: 0
+
+colt:!if
+    ~colt-quest=1:
+        desc: >
+            The young colt is crying under a tree, it would seem like no other pony has noticed.
+            Next to him is broken flying disk, you go up to him and ask him what is wrong.
+            He manages to explin through his sobbing how he borrowed his brother flying disk,
+            but then it broke whilst he was playing with it and he dosen't want to upset his brother.
+            You figure you could try and help him.
+        switch:
+            ~colt-quest:1
+
+north:
+    desc: North to the Town hall
+    link: You head North to the town hall
+    goto: town-hall-outside
