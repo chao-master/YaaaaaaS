@@ -4,6 +4,7 @@ import textwrap
 import yaml
 import pprint
 import os.path
+import warnings
 
 ##Used for getting the size of the terminal
 def getTerminalSize():
@@ -72,6 +73,9 @@ class NotLinkSection(Exception):
 class NoValue(Exception):
     pass
 
+class ParsingWarning(UserWarning):
+    pass
+
 ##Game logic
 class Game():
     def __init__(self,folder):
@@ -96,7 +100,10 @@ class Game():
         try:
             for k,v in self.getData("_","init").items():
                 self.setVar(k,v,False)
-        except NoValue: pass
+        except NoValue:
+            pass
+        except AttributeError as e:
+            warnings.warn(ParsingWarning("Warning file {}'s _.init isn't a mapping".format(self.roomName)))
 
         for k,v in self.getData().items():
             if k == "_": continue
