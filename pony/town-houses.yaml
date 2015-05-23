@@ -14,7 +14,7 @@ house 5:
     desc: A small family house with an extension
 
 house 6: !if
-    colt-quest=2:
+    ~colt-quest=2:
         desc: >
             A reasonable sized house, but what grabs your attention is the large number boxes outside that look like
             they contained sporting goods. This looks like it could be there the stall owner and his brother lives.
@@ -22,10 +22,10 @@ house 6: !if
             As he gets near you catch his attention and explain to him how his brother has sold out alread.
             He isn't suprised at all but notes he really can't leave the house, for any extended period of time to resock the stall
             You propose you could try but he shoots down that idea stating he would need some considerable collateral to make sure
-            you didn't run off with them. Though after he checks the mail he notes if you *do* find such collateral to come back.
+            you didn't run off with them. Though after he checks the mail he notes if you do find such collateral soon to come back and see him.
         switch:
-            colt-quest=3:
-    colt-quest:3:
+            ~colt-quest: 3
+    ~colt-quest=3:
         desc: >
             The sport stall's owner's and his brother house. The aforementioned brother is rather sick right now.
             You decide it's best not to bother him unless you can find the collateral he wants to let you resock the stall.

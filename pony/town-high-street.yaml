@@ -19,7 +19,7 @@ sports: !if
             And since his brother is under the weather today he can't leave the stall to restock from his house.
         switch:
             ~colt-quest:2
-    colt-quest=2: *coltQuest1
+    ~colt-quest=2: *coltQuest1
     '':
         desc: >
             You fight your way through the crowd but are soon disapointed,

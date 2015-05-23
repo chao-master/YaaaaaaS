@@ -3,6 +3,7 @@ import functools
 import textwrap
 import yaml
 import pprint
+import os.path
 
 ##Used for getting the size of the terminal
 def getTerminalSize():
@@ -68,11 +69,16 @@ class NoValue(Exception):
 
 ##Game logic
 class Game():
-    def __init__(self,startRoom):
+    def __init__(self,folder):
         self.variables = {}
+        self.folder = folder
         self.roomName = None
         self.roomData = None
-        self.changeRoomTo = startRoom
+
+        with open(os.path.join(self.folder,"yasGame.yaml")) as f:
+            config = yaml.load(f)
+            self.changeRoomTo = config["startingRoom"]
+
 
     def changeRoom(self):
         if self.changeRoomTo == self.roomName:
@@ -80,11 +86,11 @@ class Game():
             return False
         self.roomName = self.changeRoomTo
         self.changeRoomTo = None
-        self.roomData = loadRoom(self.roomName)
+        self.roomData = loadRoom(os.path.join(self.folder,self.roomName))
 
         try:
-            for k,v in self.getData("_","init"):
-                self.self.setVar(self,k,v,False)
+            for k,v in self.getData("_","init").items():
+                self.setVar(k,v,False)
         except NoValue: pass
 
         for k,v in self.getData().items():
@@ -130,6 +136,8 @@ class Game():
         try:
             dSection = self.unif(self.roomData[section])
         except KeyError:
+            raise NotSection(section)
+        if dSection is None: #Fix to raise If based error
             raise NotSection(section)
 
         if value is None:
@@ -203,7 +211,6 @@ class Game():
                 if inpu[0] in self.getData().keys():
                     inpu = ["go",inpu[0]]
 
-
             if len(inpu) == 2:
 
                 if inpu[0] == "look":
@@ -214,5 +221,7 @@ class Game():
                     print (textwrap.fill(self.go(inpu[1]), width=width-5, initial_indent=" "*5, subsequent_indent=" "*5))
                     continue
 
-game = Game("pony/town-high-street")
+            print (" * Bad command try: go or look * ")
+
+game = Game("pony")
 game.gameLoop()

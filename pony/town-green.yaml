@@ -9,8 +9,8 @@ _:
     init:
         ~colt-quest: 0
 
-colt:!if
-    ~colt-quest=1:
+colt: !if
+    ~colt-quest=0:
         desc: >
             The young colt is crying under a tree, it would seem like no other pony has noticed.
             Next to him is broken flying disk, you go up to him and ask him what is wrong.
@@ -19,6 +19,9 @@ colt:!if
             You figure you could try and help him.
         switch:
             ~colt-quest:1
+    ~colt-quest=1: &colt-quest-1
+        desc: >
+            You reassure the colt you are working hard to help replace the flying disk and haven't forgotten
 
 north:
     desc: North to the Town hall
