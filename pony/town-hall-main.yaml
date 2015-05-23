@@ -1,0 +1,35 @@
+_:
+    name: Town Hall Exhbition Hall
+    prompt: Town Hall
+    desc: >
+        The exhibition hall stands just as tall as the lobby, with a slightly raised stage and balcony seats.
+        It was designed to hold all of the town residents but that was some decades ago now
+        and expecting to keep up with the population growth was a bit extream.
+        Right now the decorations are being put up for the summer sun celebration.
+        You wonder if you are allowed to be here, but the only other pony seems a little worried about other things.
+    init:
+        ~idol-quest:0
+
+mare: !if
+    ~idol-quest=0:
+        desc: >
+            You slowly go up to then call out to the mare to see if she is all right, despite clearing not seeming it.
+            She manages to explain how the center peice for the celebration tomorrow has dissapeared from her office.
+            Since you can't stand to see a pony so distraught like this you offer to help her look, asking first to see her office.
+            She gives you a spare key to the offices.
+        switch:
+            ~idol-quest: 1
+            ~town-hall-lobby.west.locked: False
+    ~idol-quest=1:
+        desc: >
+            You reassure the mare you are on the case and she thanks you.
+
+north:
+    desc: The main exbhition hall.
+    link: You cautionsly slide into the main exbhition hall.
+    goto: town-hall-main
+
+south:
+    desc: Back to the lobby.
+    link: You decide you had better go and head back to the lobby.
+    goto: town-hall-outside

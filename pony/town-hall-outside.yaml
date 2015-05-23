@@ -1,0 +1,20 @@
+_:
+    name: Town Hall Lawn
+    prompt: Town Hall
+    desc: >
+        You walk up to the tall town hall, like always the doors are open and inviting though not many ponies are here.
+        Since it came from before an age of descent cool design most of the windows are around the town hall are open
+        to help ventilate some cold air in, under one of these window a scruff looking group of young stallions and snickering.
+
+stallions:
+    desc: As you aproach they quiet down and give you some strange looks.
+
+in:
+    desc: In to the town hall
+    link: You walk up the stairs
+    goto: town-hall-lobby
+
+south:
+    desc: Back towards the town center over the green
+    link: You head back to the green.
+    goto: town-green

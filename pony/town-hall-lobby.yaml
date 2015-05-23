@@ -1,0 +1,24 @@
+_:
+    name: Town Hall Lobby
+    prompt: Town Hall
+    desc: >
+        The lobby is tall and grand, half arc balcony above you, though you dont know where the stiars to it are.
+        To the west apears to be the private offices.
+        Ahead to the north is the main exhbition hall, it looks like they are preparing for the summer sun celebration.
+
+north:
+    desc: The main exbhition hall.
+    link: You cautionsly slide into the main exbhition hall.
+    goto: town-hall-main
+
+west:
+    desc: The offices, you have the key the mare gave you so you can enter.
+    descLocked: Private offices, not all areas of the town hall are open to the public.
+    link: You unlock the door and go in, locking it after you. We dont want anything else stolen.
+    linkLocked: Private. It means the doors are locked...
+    locked: True
+
+out:
+    desc: Out of the town hall.
+    link: You head down the steps and out of the town hall.
+    goto: town-hall-outside
