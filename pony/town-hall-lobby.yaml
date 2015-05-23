@@ -16,6 +16,7 @@ west:
     descLocked: Private offices, not all areas of the town hall are open to the public.
     link: You unlock the door and go in, locking it after you. We dont want anything else stolen.
     linkLocked: Private. It means the doors are locked...
+    goto: town-hall-offices
     locked: True
 
 out:

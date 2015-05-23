@@ -8,7 +8,7 @@ _:
         Right now the decorations are being put up for the summer sun celebration.
         You wonder if you are allowed to be here, but the only other pony seems a little worried about other things.
     init:
-        ~idol-quest:0
+        ~idol-quest: 0
 
 mare: !if
     ~idol-quest=0:
