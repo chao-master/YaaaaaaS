@@ -49,7 +49,7 @@ class ifBlock(yaml.YAMLObject):
             except ValueError:
                 m=True
             gt = game.getVar(k,False)
-            if type(gt) = bool:
+            if type(gt) == bool:
                 m = m.lower() == "true"
             else:
                 m = type(gt)(m)
