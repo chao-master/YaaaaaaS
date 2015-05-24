@@ -1,0 +1,20 @@
+_:
+    name: Town Hall Offices
+    prompt: Town Hall
+    desc: >
+        The Non public part of the town hall isn't as well kept with paper left everywhere,
+        They are 4 small offices coming off this corridoor, 1-4.
+
+office 1:
+    desc: The door is locked.
+
+office 2:
+    desc: The door is locked.
+
+office 3:
+    desc: The office the centerpeice was stolen from, and which you now have a key for.
+    link: You unlock the door and enter
+    goto: town-hall-mare-office
+
+office 4:
+    desc: The door is locked.

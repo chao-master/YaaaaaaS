@@ -1,0 +1,18 @@
+_:
+    name: The Mare's Office
+    prompt: Town Hall
+    desc: >
+        The Mare's office is as bout as well kept as the hallway.
+        If it wasn't for the fact the centerpeice was as large as you it could easily still be in here.
+        The window is wide open letting in cold air and noise from the green.
+
+window: !if
+    ~idol-quest=1:
+        desc: >
+            You go upto the window and listen closly and realise you are next to the group of stallions outside.
+            Your easedropping reveals they are a no good group of trouble makers and broke into the office a while back,
+            taking and hiding the centerpeice as part of a dare.
+            You don't manage though to hear where they hid it.
+        switch:
+            ~idol-quest: 2
+    

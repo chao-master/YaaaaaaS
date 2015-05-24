@@ -1,1 +1,4 @@
 startingRoom: town-center
+
+include:
+    "includes/maze.py"
