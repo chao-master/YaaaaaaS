@@ -10,7 +10,7 @@ _:
     init:
         ~idol-quest: 0
 
-mare: !if
+mare:
     ~idol-quest=0:
         desc: >
             You slowly go up to then call out to the mare to see if she is all right, despite clearing not seeming it.

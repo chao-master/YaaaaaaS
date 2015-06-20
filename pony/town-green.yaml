@@ -9,7 +9,7 @@ _:
     init:
         ~colt-quest: 0
 
-colt: !if
+colt:
     ~colt-quest=0:
         desc: >
             The young colt is crying under a tree, it would seem like no other pony has noticed.

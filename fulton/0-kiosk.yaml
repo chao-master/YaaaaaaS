@@ -1,0 +1,12 @@
+_:
+    name: Fulton Infomation Desk
+    prompt: Desk
+    desc: >
+        You're not sure why this one building merits such a nice looking infomation desk,
+        though it proably spends a lot of time redirecting people to other buildings and
+        the relevant departments. The desk attentent is currentlly occupied,
+        looks like she will be for some time.
+
+south:
+    desc: South back to the Lobby
+    goto: 0-kiosk

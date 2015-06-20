@@ -13,7 +13,7 @@ house 4:
 house 5:
     desc: A small family house with an extension
 
-house 6: !if
+house 6:
     ~colt-quest=2:
         desc: >
             A reasonable sized house, but what grabs your attention is the large number boxes outside that look like

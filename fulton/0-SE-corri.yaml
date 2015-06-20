@@ -1,0 +1,26 @@
+_:
+    name: Fulton House Corridoor
+    prompt: Corridoor
+    desc: >
+        Rain pelts down on the floor to ceiling windows to the south as you move along the wide corridoor.
+        A stray table and white board sit ideally, a few spare notes left on from it's last users.
+        There is 2 shop fronts on the northen wall here, but one of them is closed.
+        Old pictures of house for rent from last year are just visable behind a sign declaring SAS Letting has moved.
+        The second shop is advertising numerous travel options and discounts students could get on going places,
+        yep thats defintally a travel shop.
+        Next to the travel shop at the end of the corridoor are a pair of cash machines,
+        though on closer inspection both are out of order.
+        To the east is the door to the stair well,
+        and tucked to the south of that door is security's.
+
+north:
+    desc: North into the travel shop
+    goto: 0-travel-shop
+
+east:
+    desc: East to the stair well
+    goto: 0-SE-stairs
+
+west:
+    desc: West back to the lobby
+    goto: 0-lobby

@@ -1,0 +1,23 @@
+_:
+    name: Fulton House Lobby
+    prompt: Lobby
+    desc: >
+        You stand in the lobby of Fulton house, shielding yourself from the rain.
+        Numerous people are crowded near the door waiting just inside the saftey of the building for the bus to pull up.
+        To the north is the infomation desks.
+        A map you can make out through the glass divider informs you to the East is
+        the cash machines, security and the stairs leading to Fusion cafe.
+        To the west is Blas, the costcutter, postoffice and the stairs leading to the pub.
+        The lecture and seminar rooms seem sprinkled around the upper floors.
+
+north:
+    desc: North to the Infomation desks
+    goto: 0-kiosk
+
+east:
+    desc: East along the corridoor
+    goto: 0-SE-corri
+
+west:
+    desc: West along the corridoor
+    goto: 0-SW-corri

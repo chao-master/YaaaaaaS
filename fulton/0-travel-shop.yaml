@@ -1,0 +1,9 @@
+_:
+    name: Travel Shop
+    prompt: Travel Shop
+    desc: >
+        The travel shop
+
+south:
+    desc: South back to the corridoor
+    goto: 0-SE-corri

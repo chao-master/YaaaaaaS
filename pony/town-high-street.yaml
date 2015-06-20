@@ -10,7 +10,7 @@ _:
         And finally the local farmer's apple cart.
         As the crowd moves around you you barely manage to keep track of which way out is.
 
-sports: !if
+sports:
     ~colt-quest=1: &coltQuest1
         desc: >
             The sporting stall seems like the perfect place to replace the young colt's broken flying disk,

@@ -1,0 +1,14 @@
+_:
+    name: Town Wood Street
+    prompt: Town Wood Street
+    desc: >
+
+
+north:
+    desc: North to Town center
+    link: You head North to the Town center
+    goto: town-center
+
+south:
+    desc: South out of the town and into the woods
+    link:

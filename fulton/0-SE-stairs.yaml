@@ -1,0 +1,29 @@
+_:
+    name: Fulton House Stairs
+    prompt: Stairs
+    desc: >
+        You stand at the bottom of the 4 flights of stairs.
+        To the north is a small room, a sign indicates it leads to the chaplancy and
+        the girls bathroom.
+        Tucked under the stairs to the east is the disabled toilet and several broken chairs.
+        To the south is the men's bathroom
+        To the west is the main corridoors of the ground floor.
+
+north:
+    locked: true
+    desc: You don't particaular want to visit the chaplancy or the ladies.
+    goto: nowhere
+
+east:
+    locked: true
+    desc: You dont need the toilet, and you are also not disabled.
+    goto: nowhere
+
+south:
+    locked: true
+    desc: You don't particaular want to visit the little boy's room now
+    goto: nowhere
+
+west:
+    desc: West back to the lobby
+    goto: 0-lobby
