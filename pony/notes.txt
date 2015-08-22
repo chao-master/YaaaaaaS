@@ -1,0 +1,31 @@
+Quests:
+  Colt:
+    0 Talk to the colt on the town green
+    1 Visit the sports stall on the highstreet
+    2 Visit house 6 at the cul-de-sac
+    3 Return to the house after doing Idol Quest to collect the stock
+    4 Return to the stall
+    5 Return to the colt with the disc
+
+  Idol:
+    0 Talk to the mare in the town hall's main room
+    1 Listen out her window, overhearing the colts who hid the idol
+    2 Find the idol inside the woods
+    3 Return to the mare and tell her you found it
+
+
+Map:
+
+            Main Hall
+              |
+Offices   - Lobby
+    |         |              
+Office      Outside
+              |
+            Green
+              |
+  Houses  - Center  -  High street
+              |
+            Street
+              |
+            Woods
